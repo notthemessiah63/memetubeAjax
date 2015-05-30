@@ -1,7 +1,6 @@
 function appendVideo(data){
-    console.log("append video")
     //  add the returned video to the list
-    $('<li>'+ data.artist + data.title + '</li>').prependTo("#video-list")
+    $('<li>'+ data.artist + '  -  ' + data.title + '</li>').prependTo("#video-list")
 }
 function getVideos() {
   // Ajax request to retrieve all the items
@@ -17,8 +16,12 @@ function getVideos() {
 }
 
 
-
 $(document).ready(function() {
   getVideos();
+  // $('#new-todo').on('keypress', function(event){
+  //   if(event.which === 13) {
+  //     createItem();
+  //   }
+  //   // console.log(event);
 
 })
