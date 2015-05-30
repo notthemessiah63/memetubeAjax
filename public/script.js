@@ -1,6 +1,6 @@
 function appendVideo(data){
-    //  add the returned video to the list
-    $('<li>'+ data.artist + '  -  ' + data.title + '</li>').prependTo("#video-list")
+    //  add the returned video to the list with play and delete buttons
+    $('<li>'+ data.artist + '  -  ' + data.title + '<button class="playVid" data-id="'+ data.id +'"></button>' + '<button class="deleteVid" data-id="'+ data.id +'"></button>' + '</li>').prependTo("#video-list")
 }
 function getVideos() {
   // Ajax request to retrieve all the items
@@ -18,10 +18,9 @@ function getVideos() {
 
 $(document).ready(function() {
   getVideos();
-  // $('#new-todo').on('keypress', function(event){
-  //   if(event.which === 13) {
-  //     createItem();
-  //   }
-  //   // console.log(event);
+  
+  // $('#video-list').on('click', '.playVid', playVideo);
+
+  // $('#video-list').on('click', '.deleteVid', deleteVideo);
 
 })

@@ -24,20 +24,12 @@ end
 
 
 
-# # new method (create step 1/2)
-# get "/videos/new" do
-#   erb :new
-# end
+# new method (create step 1/2)
+get "/videos/new" do
+  erb :new
+end
 
-# # create method (step 2/2)
-# post "/videos" do
-#   artist = params[:artist]
-#   title = params[:title]
-#   description = params[:description]
-#   category = params[:category]
-#   genre = params[:genre]
-#   url = params[:url]
-#   # views = 0
+
 
 #   sql = "INSERT INTO videos (artist, title, description, category, genre, url, views) VALUES (#{sql_string(artist)}, #{sql_string(title)}, #{sql_string(description)}, '#{category}','#{genre}', '#{url}', 0);"
 #   run_sql(sql)

@@ -177,6 +177,13 @@ h3{
   vertical-align: text-top;
 }
 
+/*#playVid{
+  width: 50px;
+  height:25px;
+  margin: 0px;
+}*/
+
+
 .input{
   display: block;
   font-size: 15px;
@@ -189,6 +196,9 @@ h3{
 }
 
 .button{
+  width: 50px;
+  height:25px;
+  margin: 0px;
   /*padding: 0px;*/
 }
 
