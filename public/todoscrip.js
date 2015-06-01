@@ -3,7 +3,7 @@ function appendNewItem(data){
     $('<li class="'+ (data.done == 't' ? "completed" : "") + '">'+
       '<input class="toggle" type="checkbox" data-id="'+ data.id +'" '+ (data.done == 't' ? 'checked="checked"' : "") + '>'+
       '<label>'+ data.item +'</label>'+
-      // data.id holds an id so we can match to database
+      // data.id holds an id so we can match to database - newest at the top.
       '<button class="destroy" data-id="'+ data.id +'"></button>'+
     '</li>').prependTo("#todo-list")
 

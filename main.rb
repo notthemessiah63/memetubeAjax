@@ -21,7 +21,16 @@ get '/videos' do
   end
 end
 
-
+#  when video selected by button click request video from database
+get '/videos/:id' do
+  sql = "select * from videos where id=#{params[:id]}"
+  run_sql(sql)
+  if request.xhr?
+    json @videos.to_a
+  else
+    redirect_to '/videos'
+  end
+end
 
 
 # new method (create step 1/2)
